@@ -1,0 +1,72 @@
+﻿The beginning of an assembly file must be one of the following:
+
+    EOF
+    Newline
+    Whitespace
+    Line Comment
+    Block Comment
+	Proprocessor directive
+	ROM Info
+	Define
+	Macro
+	Program command
+	Assembly Instruction
+
+EOF:
+    '\0'
+
+Newline:
+    '\n'
+    '\r'
+    '\r' '\n'
+
+Whitespace:
+    ' '
+    '\t'
+
+Line comment:
+    Line-comment-prefix Line-comment-text
+
+Line-comment-text:
+	Any but '\r' or '\n'
+
+Block comment:
+	/* Block-comment-text */
+
+Block-comment-text:
+	Any text not ending in */
+
+Preprocessor directive
+	# Nondigit Keyword-letter
+
+Nondigt:
+	a-z
+	A-Z
+	_
+
+keyword-letter:
+	Nondigit
+	digit
+
+digit:
+	0-9
+
+
+What can each character be when parsing code?
+a-Z, A-Z, _ :	Keyword, parse until no a-Z, A_Z, 0-9, _ char.
+0-9			:	Number, Must come after 
+{			:	Opening brace. Group code in brace until closing brace.
+}			:	Closing brace, must be matched with earlier opening brace.
+[			:	For opcodes. Only valid with defined opcodes.
+]			:	For opcodes. Only valid with defined opcodes.
+#			:	Preprocssor directive. Can also be used for direct values, but invalid at this time.
+(			:	Opening parenthesis for math, opcode, macro, or preprocessor. Not valid for arg start.
+)			:	Closing parenthesis.
+<			:	Less than or macro arg. Not valid for start.
+>			:	Greater than or macro arg.
+%			:	Modulo or binary number. Not valid
+:			:	Block separator or label. Must follow whitespace for block, or keyword for label.
+;			:	Line comment
+.			:	Opcode size specifier. Only valid when following an opcode.
+?			:	Invalid char. Map out-of-character values to this.
+*			:	Multiplication. Must follow a number.

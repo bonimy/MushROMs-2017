@@ -1,0 +1,45 @@
+﻿The original command line format for xkas was
+
+	xkas asmpath [srcpath] [destpath]
+
+I'm interested in taking a more C-style approach where we have command line prefixes to signify output.
+
+	xkas main.asm -o out.smc -s source.smc
+
+Another idea is, like C, to allow compiling multiple source files into one output file
+
+	xkas bank0.asm bank1.asm bank2.asm bank3.asm -o homebrew.smc
+
+This allows us to take advantage of threaded compiling, greatly reducing running time. However, we can run into name resolution errors if, say, bank0 called a routine in bank1 or vice-versa. The original xkas used incsrc files to process multiple assembly files into one long file. However this limits us to a single thread (which for small projects doesn't hurt us much). Disassembled games (such as Super Mario All-Stars at 2MB) take up to a minute to compile. If we took advantage of multi-core processing (and other compiler optimizations discussed later), this time can be greatly reduced. [See IncludeFiles.txt for more thoughts]
+
+I would also like to add command-line options to increase the flexibility of the assembler. Perhaps a config file would also be useful for certain settings.
+
+/o								Output file name
+/S								Source file ROM folder
+/s								Source file ROM name
+/I								Additional folder to look for include or source files
+*.*								Search for all files using specific pattern
+/pm[+|-]						print messages
+/pw[+|-]						print warnings
+/pe[+|-]						print errors
+/mf:"TEXT"						message format
+/mw:"TEXT"						warning format
+/me:"TEXT"						error format
+/we:[code1|code2|...]			treat warnings as errors
+/define:[def1[=val1]|...]		include additional defines
+/args:["ARGS1"|...]				additional command line arguments
+/asm:[fusion|xkas|asar]			starting assembly format
+/lc[+|-]						use lunar compress
+/dw:[code1|code2|...]			disable warnings
+/iw:[code1|code2|...]			include warnings
+/exe:"PATH"|"ARGS"				use another program
+/print:["MSG1"|"MSG2"|...]		print messages to console
+/strict:[fusion|xkas|asar]		strictly assemble in given format
+/threading[+|-]					use multithreading for assembly (maybe) [?]
+/stresc[+|-]					string escape sequences (\t, \", \', \0, etc.)
+/ovr[+|-]						override internal command line args
+/xcase[+|-]						hex upper or lower case
+/xformat[+|-]					address formatting
+/stderr[+|-]					print errors to stderr
+/stdout[+|-]					print errors to stdout
+/O3[+|-]						optimize for space (do a third pass)

@@ -1,0 +1,5 @@
+﻿!Address = $00
+!Word = $00 + $100
+!Foo = !Address + Word ;This needs to be tested
+!Bar = !Address!Word /* what could happen here? */
+!Test = !Foo/*or here?*/!Bar

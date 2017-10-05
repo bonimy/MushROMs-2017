@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC6D389E-6695-4463-932E-3F02A54727C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MushROMs.Editors</RootNamespace>
+    <AssemblyName>MushROMs.Editors</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\KeyFile.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlendDialog.cs" />
+    <Compile Include="BlendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlendForm.Designer.cs">
+      <DependentUpon>BlendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorizeDialog.cs" />
+    <Compile Include="ColorizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorizeForm.Designer.cs">
+      <DependentUpon>ColorizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateGFXOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateGFXOptionsControl.Designer.cs">
+      <DependentUpon>CreateGFXOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePaletteOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreatePaletteOptionsControl.Designer.cs">
+      <DependentUpon>CreatePaletteOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditorFormLibraryPlugin.cs" />
+    <Compile Include="EditorGridItem.cs" />
+    <Compile Include="GFXControl.cs" />
+    <Compile Include="GFXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GFXForm.Designer.cs">
+      <DependentUpon>GFXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEditorDialog.cs" />
+    <Compile Include="CreateEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEditorForm.Designer.cs">
+      <DependentUpon>CreateEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GFXStatusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GFXStatusControl.Designer.cs">
+      <DependentUpon>GFXStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GFXZoomScale.cs" />
+    <Compile Include="GrayscaleDialog.cs" />
+    <Compile Include="GrayscaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrayscaleForm.Designer.cs">
+      <DependentUpon>GrayscaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Obj16Control.cs" />
+    <Compile Include="Obj16Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obj16Form.Designer.cs">
+      <DependentUpon>Obj16Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Obj16StatusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Obj16StatusControl.Designer.cs">
+      <DependentUpon>Obj16StatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaletteBGSize.cs" />
+    <Compile Include="PaletteControl.cs" />
+    <Compile Include="PaletteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaletteForm.Designer.cs">
+      <DependentUpon>PaletteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaletteStatusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaletteStatusControl.Designer.cs">
+      <DependentUpon>PaletteStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaletteZoomScale.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RGBDialog.cs" />
+    <Compile Include="RGBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RGBForm.Designer.cs">
+      <DependentUpon>RGBForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColorizeForm.resx">
+      <DependentUpon>ColorizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateGFXOptionsControl.resx">
+      <DependentUpon>CreateGFXOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatePaletteOptionsControl.resx">
+      <DependentUpon>CreatePaletteOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GFXForm.resx">
+      <DependentUpon>GFXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateEditorForm.resx">
+      <DependentUpon>CreateEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GFXStatusControl.resx">
+      <DependentUpon>GFXStatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obj16Form.resx">
+      <DependentUpon>Obj16Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obj16StatusControl.resx">
+      <DependentUpon>Obj16StatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaletteControl.resx">
+      <DependentUpon>PaletteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaletteForm.resx">
+      <DependentUpon>PaletteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaletteStatusControl.resx">
+      <DependentUpon>PaletteStatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RGBForm.resx">
+      <DependentUpon>RGBForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\KeyFile.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultPalette.pal" />
+    <None Include="Resources\OpenFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAllHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_UndoHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_RedoHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CutHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PasteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnuBlend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnuColorize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnuGrayscale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnuHorizontalGradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnuInvert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnuVerticalGradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="Properties\CodeDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{5d7d8aa9-ba96-46ab-bacf-8959d4d8c549}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MushROMs.Controls\MushROMs.Controls.csproj">
+      <Project>{40127e58-984e-43a7-83d6-3e9faea7aaf3}</Project>
+      <Name>MushROMs.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MushROMs.SNES\MushROMs.SNES.csproj">
+      <Project>{66b8d14c-4901-4dc0-b154-cdc99e951f7c}</Project>
+      <Name>MushROMs.SNES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MushROMs\MushROMs.csproj">
+      <Project>{2b8f9ead-d4f4-47fd-97c3-28b620946bd3}</Project>
+      <Name>MushROMs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

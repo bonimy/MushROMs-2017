@@ -1,0 +1,5 @@
+﻿Say in bank0.asm we have the line
+
+	JMP.l SMB1Init
+
+But this is located in bank3.asm, where the game's code starts. bank0.asm has no way of knowing thiat SMB1Init is a label and not an invalid keyword/token. In C, header files are used to resolve dependancies such as this. While I am personally in favor creating .inc files for .asm files to include, it goes against the norm of the modern SNES coder and may be slow to acceptance (however, this will never be necessary for single-file assemblies or incsrc projects). It is possible to assume bad tokens will be resolved during linking. This is how C# does it (I think), and it's not even too ridiculous to think this could work here since the language is relatively very simple and labels only exist after operations. Problems in either scenario are projecting to only exist in edge cases and we may not have to worry too deeply about it. However, it is important that, while coding, we maintain the idea that .inc files may shift to use or removal midway through design, and to keep the source flexible with that in mind.

@@ -1,0 +1,8 @@
+﻿Drag and drop support for master form (opens selected file, editor determines where it goes)
+Menu and toolbar options and descriptions
+Globalize forms
+Set status text
+Create log and error files
+Create settings and resources
+Merge menus between MDI and child forms
+Context menus

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<Dictionary>
+      <Acronyms>
+         <CasingExceptions>
+            <Acronym>ROMs</Acronym>
+           <Acronym>CIE</Acronym>
+         </CasingExceptions>
+      </Acronyms>
+  <Words>
+    <Recognized>
+      <Word>x</Word>
+      <Word>y</Word>
+      <Word>z</Word>
+      <Word>num</Word>
+      <Word>bpp</Word>
+      <Word>rgb</Word>
+      <Word>argb</Word>
+      <Word>luma</Word>
+      <Word>cmy</Word>
+      <Word>cmyk</Word>
+      <Word>hcy</Word>
+      <Word>hsl</Word>
+      <Word>hsv</Word>
+      <Word>param</Word>
+    </Recognized>
+    <DiscreteExceptions>
+      <Term>ingrid</Term>
+    </DiscreteExceptions>
+  </Words>
+</Dictionary>

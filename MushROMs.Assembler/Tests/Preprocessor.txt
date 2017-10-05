@@ -1,0 +1,11 @@
+﻿/**/
+ ;test
+??=define DEBUG "Deb\
+ug" ;dfghreedfg"defrgthd      /*"
+#ifdef/**/         DE\
+BUG
+PRINT \
+              /*fgtgr*/ ;sdfge""
+DEBUG                "    ; /*;;dds    "
+    #end\
+if

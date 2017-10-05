@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40127E58-984E-43A7-83D6-3E9FAEA7AAF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MushROMs.Controls</RootNamespace>
+    <AssemblyName>MushROMs.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\KeyFile.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BufferedDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckerPattern.cs" />
+    <Compile Include="ColorValueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashedPenPair.cs" />
+    <Compile Include="DesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignControl.Keys.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignControl.Mouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogProxy.cs" />
+    <Compile Include="ErrorCodeException.cs" />
+    <Compile Include="IEditorForm.cs" />
+    <Compile Include="IEditorFormLibraryPlugin.cs" />
+    <Compile Include="IIntegerComponent.cs" />
+    <Compile Include="IntegerTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LinkedTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RtlAwareMessageBox.cs" />
+    <Compile Include="TileMapControl2D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TileMapEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TileMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TileMapForm1D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TileMapResizeMode.cs" />
+    <Compile Include="WinAPIMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinAPIRectangle.cs" />
+    <Compile Include="TileMapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TileMapControl1D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnsafeNativeMethods.cs" />
+    <Compile Include="WindowMessages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{5d7d8aa9-ba96-46ab-bacf-8959d4d8c549}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MushROMs\MushROMs.csproj">
+      <Project>{2b8f9ead-d4f4-47fd-97c3-28b620946bd3}</Project>
+      <Name>MushROMs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\KeyFile.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mspaint_60389.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mspaint_60393.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mspaint_60397.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mspaint_60401.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mspaint_60405.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActualSizeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToFavoritesHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alerts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsBottomHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsCenteredHorizontalHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsCenteredVerticalHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsLeftHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsRightHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsTopHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignTableCellMiddleCenterHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignTableCellMiddleLeftJustHS.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignTableCellMiddleRightHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignToGridHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApproveReject_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApproveReject_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrangeSideBySideHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrangeWindowsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttachFileHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttachmentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AudioHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundSoundHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarCodeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BehindTextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boldhs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_addressHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book_angleHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book_openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_reportHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book_StackOfReportsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BringForwardHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BringToFrontHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalculatorHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_scheduleHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CancelApproval_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanvasScaleHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CascadeWindowsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CenterAcrossHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckBoxHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckGrammarHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckSpellingHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChooseColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_background_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_eyedropper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_fontHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_linecolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CommentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compareversionsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConflictHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CutHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveFirstHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveLastHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveNextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MovePreviousHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_NewRecordHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_black_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-PermissionHH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiscardChanges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisplayInColorHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleLeftArrowHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleRightArrowHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_RedoHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_UndoHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditBrightContrastHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditCodeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditDocument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditHTMLSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditInformationHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Permission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditTask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditTask_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnvelopeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eps_closedHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eps_open_largeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eps_openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpandSpaceHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpirationHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FaxHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FilesDownload_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillDownHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillLeftHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillRightHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillUpHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter2HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_VS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindNext_VS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindNextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindPrevious_VS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_blueHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_greenHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_redHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlipHorizontalHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlipVerticalHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontDialogHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forecolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormRunHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormulaEvaluatorHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FullScreenHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FunctionHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GetLatestVersion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoLtrHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoRtlHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNextRecord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToParentFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToPrevious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToPreviousMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToPreviousRecord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GotoShortcutsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphhs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighlightHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HtmlBalanceBracesHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLPasswordHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLSubmitHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IgnoreIssue_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportXMLHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertHyperlinkHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertPictureHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertTabControlHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ItalicHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutSelectColumn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutSelectRow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LegendHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LineColorHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_BulletsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_NumberedHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_NumberedRTLHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_NumberedTBHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_NumberedVertTHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonthlyViewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveToFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiplePagesHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavForward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewCardHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewDocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewMessageHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewReportHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWebsite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextPageHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notify_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openfolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenInBrowser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenSelectedItemHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OptionsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrganizerHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrgChartHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OutdentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageNumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageUpHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageWidthHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PasteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseRecorderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PieChart3DHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PieChartHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PointerHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PortraitHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PortraitLandscapeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PreviousPageHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrimaryKeyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintArea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintPreviewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintSetupHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProtectFormHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProtectSubdocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PublishMajorVersion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PublishPlanHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PublishToWebHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PushpinHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadialChartHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecolorPictureHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReduceSize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshDocViewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RelationshipsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Removehyperlink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RepeatHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResizeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestartHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow2HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrowHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightsRestrictedHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightToLeftDoucmentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoutingSlipHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RulerHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAllHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAsWebPageHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveFormDesignHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchWebHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendBackwardHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendInstantMessage_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendLinkByEmail_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendToBackHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowAllCommentsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowGridlines2HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowGridlinesHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowRulelinesHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowRulerHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SortHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SortUpHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeechMicHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitSubdocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubmitForApproval_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SychronizeListHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SymbolHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextboxHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbnailLoadingHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbnailView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TileWindowsHorizontallyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ViewAllPages_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ViewThumbnailsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebInsertHyperlinkHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WindowsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XMLFileHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoomHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="Properties\CodeDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

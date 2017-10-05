@@ -1,0 +1,13 @@
+;
+;This is an empty assembly file with comments
+/* both forms of comments are accepted */
+/* and we need to be sure that
+	newlines work as predicted */
+
+	;Also that whitespace does not cause issues
+        ;Both tabs and multiple spaces
+  	  /*It also helps to see*/  /*that block comments can */
+  	     /*exist on the same line*//*regardless of whitespace too
+
+
+*/

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<Dictionary>
+    <Acronyms>
+        <CasingExceptions>
+            <Acronym>ROMs</Acronym>
+            <Acronym>ROM</Acronym>
+            <Acronym>SNES</Acronym>
+            <Acronym>TPL</Acronym>
+            <Acronym>PAL</Acronym>
+            <Acronym>MW</Acronym>
+            <Acronym>ZST</Acronym>
+            <Acronym>GFX</Acronym>
+        </CasingExceptions>
+    </Acronyms>
+    <Words>
+        <Recognized>
+            <Word>x</Word>
+            <Word>y</Word>
+            <Word>z</Word>
+            <Word>num</Word>
+            <Word>bpp</Word>
+            <Word>rgb</Word>
+            <Word>argb</Word>
+            <Word>bgr</Word>
+            <Word>cie</Word>
+            <Word>luma</Word>
+            <Word>cmy</Word>
+            <Word>cmyk</Word>
+            <Word>hcy</Word>
+            <Word>hsl</Word>
+            <Word>hsv</Word>
+            <Word>param</Word>
+            <Word>nes</Word>
+            <Word>gb</Word>
+            <Word>gba</Word>
+            <Word>ngp</Word>
+            <Word>vb</Word>
+            <Word>snes</Word>
+            <Word>sms</Word>
+            <Word>msx</Word>
+            <Word>pce</Word>
+            <Word>rom</Word>
+        </Recognized>
+        <DiscreteExceptions>
+            <Term>ingrid</Term>
+        </DiscreteExceptions>
+    </Words>
+</Dictionary>
